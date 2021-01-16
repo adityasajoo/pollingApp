@@ -4,6 +4,7 @@ A simple polling application, where users are given few choices, can vote for on
 
 ![Getting Started](./ss.PNG)
 
+## Demo can be found [here](https://polling-app-adi.herokuapp.com/)
 ---
 
 ## Requirements

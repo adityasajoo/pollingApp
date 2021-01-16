@@ -10,8 +10,8 @@ import table from './table.js';
  */
 export function fetchLineGraph(ctx){
     Promise.all([
-        fetch("http://localhost:3000/count/Yes"),
-        fetch("http://localhost:3000/count/No"),
+        fetch("https://polling-app-adi.herokuapp.com/count/Yes"),
+        fetch("https://polling-app-adi.herokuapp.com/count/No"),
     ]).then(allResponses => {
         const response1 = allResponses[0].json();
         const response2 = allResponses[1].json();
@@ -35,7 +35,7 @@ export function fetchLineGraph(ctx){
  */
 export function fetchBarGraph(ctx){
     Promise.all([
-        fetch("http://localhost:3000/result")
+        fetch("https://polling-app-adi.herokuapp.com/result")
     ]).then(response=>{
         const resp = response[0].json();
         Promise.all([resp])
@@ -61,7 +61,7 @@ export function fetchBarGraph(ctx){
  */
 export function fetchTable(myTable){
     Promise.all([
-        fetch("http://localhost:3000/data")
+        fetch("https://polling-app-adi.herokuapp.com/data")
     ]).then(response=>{
         const resp = response[0].json();
         Promise.all([resp])
