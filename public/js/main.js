@@ -32,7 +32,7 @@ form.addEventListener("submit", function (e) {
             html: 'All fields are madatory !'
         });
     } else {
-        var url = 'http://localhost:3000/vote';
+        var url = 'https://polling-app-adi.herokuapp.com/vote';
         var data = {
             name: name,
             submissionDate: date,
