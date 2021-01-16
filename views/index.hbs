@@ -1,0 +1,131 @@
+
+
+<div class="container">
+    <div class="modal-container">
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4 class="center-align">Add a vote !</h4>
+
+                <div class="row">
+                    <div class="col s1"></div>
+                    <form class="col s10" action="/vote" method="post" id="myform">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input value="" id="name" name="name" type="text" class="validate">
+                                <label for="name">Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select name="choice">
+                                    <option value="" disabled selected>Your Choice</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                                <label>Choice</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" class="datepicker" name="submissionDate">
+                                <label>Date of vote</label>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s5"></div>
+                            <div class="col ">
+                            <button type="submit" class="waves-effect waves-green btn">Vote</button>
+                            </div>
+                            <div class="col s5"></div>
+                        </div>
+                    </form>
+                    <div class="col s1"></div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 offset-m3">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <h5 class="card-title black-text center-align">Add a vote</h5>
+                            <div class="btns">
+                                <p class="center-align">
+                                    <a data-target="modal1"class="btn modal-trigger ">Vote</a>
+                                </p>
+                             
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="heading">
+        <h4>Analytics</h4>
+    </div>
+
+    <div class="graph-container">
+        <div id="line-grap">
+            <canvas id="line" width="400" height="400"></canvas>
+        </div>
+        <div id="bar-graph">
+            <canvas id="bar" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="col s10">
+                <table class="striped centered" id="myTable">
+                    <thead > 
+                        <tr >
+                            <th c>Name</th>
+                            <th >Choice</th>
+                            <th >Voting Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col s1"></div>
+
+        </div>
+    </div>
+
+</div>
+
+    <script>
+        var modal;
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            modal = M.Modal.init(elems, {});
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, {});
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems, {
+                format: "yyyy-mm-dd"
+            });
+        });
+    </script>
+
+

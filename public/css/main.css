@@ -1,0 +1,79 @@
+body{
+    background-color: #eed6df;
+
+}
+nav{
+    background-color: #59253A;
+    /* background-color: #374785; */
+    padding: 3%;
+    
+}
+
+nav .brand-logo{
+    color: #eed6df;
+    /* color: #f1efef; */
+}
+
+.card{
+    border:3px;
+    margin-top: 20px;
+    background: #ddc8ceb7;
+}
+.card-title {
+    margin-top: 0px;
+}
+
+.card .card-title{
+    font-weight: 600;
+    color:#895061 !important;
+    /* color:#A8D0E6 !important; */
+
+}
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.modal {
+    width: 670px !important;
+}
+
+.input-field{
+    margin: 0px;
+}
+
+.btn{
+    border: 2px;
+    background-color: #78244c;
+}
+
+.btn:hover{
+    background-color: #caa4b3;
+}
+
+
+
+.card.hoverable:hover {
+    box-shadow: 2px 4px 5px 0 #59253A, 2px 5px 3px -3px blue, 2px 5px 10px 0 #59253A;
+}
+
+.datepicker-date-display{
+    background-color:  #59253A;
+}
+
+th{
+    background-color: #59253A;
+    color: #eed6df;
+}
+
+#line-grap{
+    margin-top: 10px;
+}
+
+#line-grap, #bar-graph{
+    margin-bottom: 50px;
+}
+
+.modal,.modal .modal-footer{
+    background: #ddc8ce;
+}
